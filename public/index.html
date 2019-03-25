@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>HW-18</title>
+  <style>
+    body {
+      background-color: #F2F6D0
+    }
+
+    .pointer {
+      cursor: pointer;
+    }
+    
+    #wrapper {
+      width: auto;
+      padding-top: 1%;
+    }
+
+    #articles {
+      overflow: auto;
+      width: auto;
+      height: 300px;
+    }
+
+    #notes {
+      overflow: auto;
+      width: auto;
+    }
+
+    textarea,
+    input {
+      display: block;
+      width: 100%;
+      background-color: rgb(225, 193, 247);
+    }
+
+    input {
+      height: 32px;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 200px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="jumbotron text-center">
+    <h1 class="display-4 text-center"><strong>Lobste.rs Headline News Network</strong></h1>
+    <p class="lead text-center">Review and annotate all the greatest software development headlines in one single place!</p>
+    <p class="lead text-center"><i>News source -- https://lobste.rs</i></p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="http://localhost:3000/scrape" role="button">Scrape Lobste.rs now!</a>
+  </div>
+
+  <div class="wrapper">
+    <div class="container">
+  
+      <div class="row">
+        <div class="col-md-8 col-ms-8">
+          <div id="articles" class="pointer alert alert-primary" role="alert"></div>
+        </div>
+        <div class="col-md-4 col-ms-4">
+          <div id="notes"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
